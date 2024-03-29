@@ -10,16 +10,6 @@ for model_name in ['Linear Regression', 'Random Forest', 'Ridge Regression', 'SV
     pipeline_model = joblib.load(filename)
     pipeline_models[model_name] = pipeline_model
 
-# Define the new data for prediction
-new_data = pd.DataFrame({
-    'batting_team': ['SRH'],
-    'bowling_team': ['MI'],
-    'Is_bat_home_team': ['Yes'],
-    'over': [6.0],
-    'ball': [6],
-    'total_runs': [70],
-    'Wkts': [1]
-})
 
 # Streamlit UI
 st.title('IPL Score Prediction App')
